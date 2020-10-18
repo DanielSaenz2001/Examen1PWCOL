@@ -1,0 +1,83 @@
+<div *ngIf="personaje">
+    <mat-toolbar color="primary" class="mb-3">
+        <span>Mi aplicacion de mi examen dx</span>
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu" style=" background: none;
+        border: 0;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+        overflow: visible;
+        padding: 0;
+        -webkit-user-select: none; /* for button */
+         -webkit-appearance: button; /* for input */
+           -moz-user-select: none;
+            -ms-user-select: none;
+            margin-left: auto;
+      ">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="['/personas']">Personajes</button>
+          <button mat-menu-item [routerLink]="['/peliculas']">Peliculas</button>
+        </mat-menu>
+      </mat-toolbar>
+    <div class="container" style="text-align: center;">
+        <table style="border: 1rem black;" class="table " >
+            <thead class="thead-light">
+                <tr >
+                    <th colspan="2"> {{personaje.name}} </th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr>
+                    <td>Cumpleaño:</td>
+                    <td>{{personaje.birth_year}} </td>
+                </tr>
+                <tr>
+                    <td>Ojo de Color:</td>
+                    <td>{{personaje.eye_color}}</td>
+                </tr>
+                <tr>
+                    <td>Color de Cabello:</td>
+                    <td>{{personaje.hair_color}}</td>
+                </tr>
+                <tr>
+                    <td>Genero:</td>
+                    <td>{{personaje.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Altura:</td>
+                    <td>{{personaje.height}}</td>
+                </tr>
+                <tr>
+                    <td>Masa:</td>
+                    <td>{{personaje.mass}}</td>
+                </tr>
+                <tr>
+                    <td>Color de Piel:</td>
+                    <td>{{personaje.skin_color}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <h2>Peliculas:</h2>
+    </div>
+
+    <div class="lista-productos">
+        <div class="producto container"  *ngFor="let item of peliculas ">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title  [routerLink]="['/pelicula', item.id]">{{item.title}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              <b>Episodio:</b> {{item.episode_id}}
+            </p>
+          </mat-card-content>
+        </div>
+      </div>
+      
+</div>
+<div class="mt-5" style="text-align: center;">
+    <button class="btn btn-success" [routerLink]="['/personas']"> Volver a la Lista de Personas</button>
+</div>

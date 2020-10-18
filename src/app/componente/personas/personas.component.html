@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" class="mb-3">
+  <span>Mi aplicacion de mi examen dx</span>
+  <span class="example-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu" style=" background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+   -webkit-appearance: button; /* for input */
+     -moz-user-select: none;
+      -ms-user-select: none;
+      margin-left: auto;
+">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/personas']">Personajes</button>
+    <button mat-menu-item [routerLink]="['/peliculas']">Peliculas</button>
+  </mat-menu>
+</mat-toolbar>
+<div class="lista-productos">
+  <div class="producto container"  *ngFor="let item of personajes ">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title [routerLink]="['/persona', item.id]">{{item.name}}</mat-card-title>
+      <mat-card-subtitle>Nombre</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <b>Genero:</b> <p *ngIf="item.gender== 'n/a'">Desconocido</p>
+        <p *ngIf="item.gender !== 'n/a'">{{item.gender}}</p>
+    </mat-card-content>
+  </div>
+</div>
+
+<div class="container mt-3" style="text-align: center;">
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(1)">1</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(2)">2</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(3)">3</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(4)">4</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(5)">5</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(6)">6</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(7)">7</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(8)">8</button>
+    <button class="btn btn-primary mr-1 ml-1" (click)="lista(9)">9</button>
+</div>
+<mat-card class="example-card" hidden=true>
+  
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+
+</mat-card>

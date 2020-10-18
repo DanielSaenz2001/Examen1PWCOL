@@ -1,0 +1,25 @@
+.table{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .lista-productos{
+    width: 98%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .producto{
+      width: 225px;
+    border: 1px solid #1a1a1a;
+    text-align: center;
+    margin: 7px;
+    border-radius: 20px;
+      box-shadow: 5px 5px 5px #4b4b4b;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin: auto;
+  
+      margin-top: 1%;
+      margin-bottom: 1%;
+  }
