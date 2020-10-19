@@ -9,7 +9,7 @@ Para instalar node.js debe seguir las siguientes instruciones: https://nodejs.or
 Luego de haber instalado node.js, debe abrir un simbolo del sistema(cmd) y poner el siguiente comando: npm install -g @angular/cli
 
 # Clonar proyecto
-Debe estar presente en la parte donde quiera poner el proyecto, ya estando ahi tendra que poner el siguiente comando en el simbolo del sistema(cmd): https://github.com/DanielSaenz2001/Examen1PWCOL.git
+Debe estar presente en la parte donde quiera poner el proyecto, ya estando ahi tendra que poner el siguiente comando en el simbolo del sistema(cmd): git clone https://github.com/DanielSaenz2001/Examen1PWCOL.git
 
 # Instalar dependencias
 Al clonarlo debe entrar a la carpeta del proyecto, abrir un simbolo del sistema(cmd) y poner el siguiente comando: npm install. Tendra que esperar que termine la instalación
