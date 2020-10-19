@@ -17,3 +17,9 @@ Al clonarlo debe entrar a la carpeta del proyecto, abrir un simbolo del sistema(
 ## Levantar servidor
 
 Abre un simbolo del sistema(cmd) dentro del proyecto cuando ya halla terminado la instalacion de las dependencias, puede poner uno de los siguientes comandos `ng serve` o `ng serve -o` para levantar el proyecto. Una vez ya levantado en una navegador puede debe poner `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
+
+# Enlaces
+  - http://localhost:4200/pelicula/{id}
+  - http://localhost:4200/peliculas
+  - http://localhost:4200/persona/{id}
+  - http://localhost:4200/personas
