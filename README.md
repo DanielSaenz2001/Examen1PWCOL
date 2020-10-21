@@ -24,5 +24,5 @@ Abre un simbolo del sistema(cmd) dentro del proyecto cuando ya halla terminado l
   - http://localhost:4200/persona/{id}
   - http://localhost:4200/personas
 # Participantes
-Daniel Andrés Sáenz Shupingahua
-Jesiel Obed Palacios Salinas
+- Daniel Andrés Sáenz Shupingahua
+- Jesiel Obed Palacios Salinas
